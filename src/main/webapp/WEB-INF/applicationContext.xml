@@ -21,4 +21,7 @@
 		</property>
 	</bean>
 	
+	<!-- Importing Spring Security -->
+	<import resource="security.xml" />
+	
 </beans>
