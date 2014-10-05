@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
+    <application>japerfect-foodorder-001</application>
+    <version>1</version>
+    <threadsafe>true</threadsafe>
+    
+    <module>default</module>
+    <!--vm>true</vm>
+    <manual-scaling>
+        <instances>1</instances>
+    </manual-scaling-->
+    
+    <system-properties>
+        <property name="java.util.logging.config.file" value="WEB-INF/logging.properties"/>
+    </system-properties>
+    
+    <sessions-enabled>true</sessions-enabled>
+    <use-google-connector-j>true</use-google-connector-j>
+</appengine-web-app>
