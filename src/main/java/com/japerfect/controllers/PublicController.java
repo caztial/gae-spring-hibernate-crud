@@ -10,4 +10,9 @@ public class PublicController {
 	public String home(){
 		return "publicHome";
 	}
+	
+	@RequestMapping("/login")
+	public String adminLogin(){
+		return "publicLogin";
+	}
 }

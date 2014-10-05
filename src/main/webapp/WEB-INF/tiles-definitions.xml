@@ -6,4 +6,8 @@
   
   <definition name="publicHome" template="/WEB-INF/jsp/public/index.jsp"></definition>
   
+  <definition name="publicLogin" template="/WEB-INF/jsp/public/login.jsp">
+  		<put-attribute name="title" value="Admin Login" />
+  </definition>
+  
 </tiles-definitions>
