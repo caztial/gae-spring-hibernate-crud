@@ -8,6 +8,6 @@ public class PublicController {
 
 	@RequestMapping("/index")
 	public String home(){
-		return "index.jsp";
+		return "publicHome";
 	}
 }

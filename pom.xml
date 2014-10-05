@@ -30,9 +30,6 @@
 
 		<!-- Spring Dependancies -->
 
-		<!-- Shared version number properties -->
-
-
 		<!-- Core utilities used by other modules. Define this if you use Spring 
 			Utility APIs (org.springframework.core.*/org.springframework.util.*) -->
 		<dependency>
@@ -153,6 +150,13 @@
 			<artifactId>spring-test</artifactId>
 			<version>${org.springframework.version}</version>
 			<scope>test</scope>
+		</dependency>
+
+		<!-- Apache Tiles -->
+		<dependency>
+			<groupId>org.apache.tiles</groupId>
+			<artifactId>tiles-extras</artifactId>
+			<version>3.0.4</version>
 		</dependency>
 
 	</dependencies>
