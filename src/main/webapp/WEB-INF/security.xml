@@ -9,8 +9,8 @@
 
 	<http use-expressions="true">
 		<intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')" />
-		<form-login login-page="/login.html"/>
-		<logout />
+		<form-login login-page="/login.html" />
+		<logout logout-url="/admin/logout.html"/>
 	</http>
 	
 	<authentication-manager>

@@ -10,4 +10,14 @@
   		<put-attribute name="title" value="Admin Login" />
   </definition>
   
+  <definition name="adminTemplate" template="/WEB-INF/jsp/admin/template/layout.jsp">
+  	<put-attribute name="title" value="Admin Area"/>
+  	<put-attribute name="navigation" value="/WEB-INF/jsp/admin/template/navigation.jsp"/>
+  	<put-attribute name="body" value=""/>
+  </definition>
+  
+  <definition name="adminBlank" extends="adminTemplate">
+  	<put-attribute name="body" value="/WEB-INF/jsp/admin/blank.jsp"/>
+  </definition>
+  
 </tiles-definitions>
