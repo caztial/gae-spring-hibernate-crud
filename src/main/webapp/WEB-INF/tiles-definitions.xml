@@ -3,21 +3,32 @@
        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 <tiles-definitions>
-  
-  <definition name="publicHome" template="/WEB-INF/jsp/public/index.jsp"></definition>
-  
-  <definition name="publicLogin" template="/WEB-INF/jsp/public/login.jsp">
-  		<put-attribute name="title" value="Admin Login" />
-  </definition>
-  
-  <definition name="adminTemplate" template="/WEB-INF/jsp/admin/template/layout.jsp">
-  	<put-attribute name="title" value="Admin Area"/>
-  	<put-attribute name="navigation" value="/WEB-INF/jsp/admin/template/navigation.jsp"/>
-  	<put-attribute name="body" value=""/>
-  </definition>
-  
-  <definition name="adminBlank" extends="adminTemplate">
-  	<put-attribute name="body" value="/WEB-INF/jsp/admin/blank.jsp"/>
-  </definition>
-  
+
+	<definition name="publicHome" template="/WEB-INF/jsp/public/index.jsp"></definition>
+
+	<definition name="publicLogin" template="/WEB-INF/jsp/public/login.jsp">
+		<put-attribute name="title" value="Admin Login" />
+	</definition>
+
+	<definition name="adminTemplate" template="/WEB-INF/jsp/admin/template/layout.jsp">
+		<put-attribute name="title" value="Admin Area" />
+		<put-attribute name="navigation"
+			value="/WEB-INF/jsp/admin/template/navigation.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+	<definition name="adminBlank" extends="adminTemplate">
+		<put-attribute name="body" value="/WEB-INF/jsp/admin/blank.jsp" />
+	</definition>
+
+	<definition name="adminAddItem" extends="adminTemplate">
+		<put-attribute name="body" value="/WEB-INF/jsp/admin/additem.jsp" />
+	</definition>
+	
+	<definition name="adminEditItem" extends="adminTemplate">
+		<put-attribute name="body" value="/WEB-INF/jsp/admin/edititem.jsp" />
+	</definition>
+
+
+
 </tiles-definitions>
