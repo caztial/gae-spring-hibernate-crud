@@ -29,6 +29,15 @@
 		<put-attribute name="body" value="/WEB-INF/jsp/admin/edititem.jsp" />
 	</definition>
 
+	<definition name="adminAddOrder" extends="adminTemplate">
+		<put-attribute name="body" value="/WEB-INF/jsp/admin/addorder.jsp" />
+	</definition>
+
+
+
+
+
+
 
 
 </tiles-definitions>

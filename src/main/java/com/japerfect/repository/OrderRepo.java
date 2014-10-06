@@ -2,8 +2,8 @@ package com.japerfect.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.japerfect.entity.Order;
+import com.japerfect.entity.FoodOrder;
 
-public interface OrderRepo extends JpaRepository<Order, Integer>{
+public interface OrderRepo extends JpaRepository<FoodOrder, Integer>{
 
 }

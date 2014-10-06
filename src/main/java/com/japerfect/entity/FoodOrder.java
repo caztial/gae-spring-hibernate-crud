@@ -11,7 +11,7 @@ import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
 
 @Entity
-public class Order {
+public class FoodOrder {
 	
 	@Id
 	@GeneratedValue

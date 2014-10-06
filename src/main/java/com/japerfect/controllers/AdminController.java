@@ -10,13 +10,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.japerfect.entity.Item;
+import com.japerfect.entity.FoodOrder;
 import com.japerfect.service.ItemService;
+import com.japerfect.service.OrderService;
 
 @Controller
 public class AdminController {
 	
 	@Autowired
 	ItemService itemService;
+	@Autowired
+	OrderService orderService;
 
 	@RequestMapping("/admin/index")
 	public String blank(){
@@ -54,4 +58,36 @@ public class AdminController {
 		model.addAttribute("flag",true);
 		return "adminEditItem";
 	}
+	
+	// Order Management
+	@RequestMapping("/admin/addorder")
+	public String addOrder(Model model){
+		FoodOrder order=new FoodOrder();
+		model.addAttribute("newOrder", order);
+		return "adminAddOrder";
+	}
+	
+	@RequestMapping(value="/admin/addorder",method=RequestMethod.POST)
+	public String doAddOrder(Model model,@ModelAttribute FoodOrder order){
+		orderService.saveOneItem(order);
+		FoodOrder norder = new FoodOrder();
+		model.addAttribute("newOrder", norder);
+		model.addAttribute("flag",true);
+		return "adminAddOrder";
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
