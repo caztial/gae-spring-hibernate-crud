@@ -1,5 +1,7 @@
 package com.japerfect.service;
 
+import java.util.List;
+
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +23,10 @@ public class ItemService  {
 
 	public Item getOneItem(int itemId) {
 		return itemRepo.findOne(itemId);
+	}
+
+	public List<Item> getAll() {
+		return itemRepo.findAll();
 	}
 	
 }

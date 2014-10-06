@@ -28,6 +28,10 @@
 	<definition name="adminEditItem" extends="adminTemplate">
 		<put-attribute name="body" value="/WEB-INF/jsp/admin/edititem.jsp" />
 	</definition>
+	
+	<definition name="adminViewItem" extends="adminTemplate">
+		<put-attribute name="body" value="/WEB-INF/jsp/admin/viewitems.jsp" />
+	</definition>
 
 	<definition name="adminAddOrder" extends="adminTemplate">
 		<put-attribute name="body" value="/WEB-INF/jsp/admin/addorder.jsp" />
