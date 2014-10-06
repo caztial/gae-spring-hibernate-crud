@@ -86,6 +86,63 @@ public class AdminController {
 		return "adminAddOrder";
 	}
 	
+	@RequestMapping(value="/admin/vieworders")
+	public String viewOrders(Model model){
+		List<FoodOrder> orders=orderService.getAll();
+		model.addAttribute("orders", orders);
+		return "adminViewOrder";
+	}
+	
+	@RequestMapping(value="/admin/editorder",method=RequestMethod.GET)
+	public String editOrder(Model model, @RequestParam int id){
+		FoodOrder order=orderService.getOneOrder(id);
+		model.addAttribute("editOrder", order);
+		return "adminEditOrder";
+	}
+	
+	@RequestMapping(value="/admin/editorder",method=RequestMethod.POST)
+	public String doEditOrder(Model model, @ModelAttribute FoodOrder order){
+		orderService.saveOneItem(order);
+		model.addAttribute("editOrder", order);
+		model.addAttribute("flag",true);
+		return "adminEditOrder";
+	}
+	
+	@RequestMapping(value="/admin/orderitems",method=RequestMethod.GET)
+	public String OrderItem(Model model, @RequestParam int id){
+		FoodOrder addItem=orderService.getOneOrder(id);
+		List<Item> itemsInOrder=addItem.getItems();
+		
+		List<Item> itemlist=itemService.getAll();
+		model.addAttribute("itemlist", itemlist);
+		model.addAttribute("orderid", id);
+		model.addAttribute("itemsInOrder", itemsInOrder);
+		return "adminOrderItems";
+	}
+	
+	@RequestMapping(value="/admin/orderitems",method=RequestMethod.POST)
+	public String doOrderItem(Model model, @RequestParam int id,@RequestParam int itemid){
+		FoodOrder addItem=orderService.getOneOrder(id);
+		List<Item> itemsInOrder=addItem.getItems();
+		Item newItem=itemService.getOneItem(itemid);
+		itemsInOrder.add(newItem);
+		orderService.saveOneItem(addItem);
+		model.addAttribute("flag",true);
+		List<Item> itemlist=itemService.getAll();
+		model.addAttribute("itemlist", itemlist);
+		model.addAttribute("orderid", id);
+		model.addAttribute("itemsInOrder", itemsInOrder);
+		
+		return "adminOrderItems";
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 }

@@ -20,13 +20,25 @@
 	</context:component-scan>
 	
 	<!-- Apache commons dbcp and mysql data connection -->
+<!-- 	<bean id="mysqlDataSource" class="org.apache.commons.dbcp.BasicDataSource" -->
+<!-- 		destroy-method="close"> -->
+<!-- 		<property name="driverClassName" value="com.mysql.jdbc.Driver" /> -->
+<!-- 		<property name="url" value="jdbc:mysql://localhost:3306/japerfect" /> -->
+<!-- 		<property name="username" value="root" /> -->
+<!-- 		<property name="password" value="root" />  -->
+<!-- 	</bean> -->
+	
 	<bean id="mysqlDataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
-		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://localhost:3306/japerfect" />
-		<property name="username" value="root" />
-		<property name="password" value="root" /> 
+			<property name="driverClassName" value="com.mysql.jdbc.GoogleDriver"/>
+			<property name="url" value="jdbc:google:mysql://APP_ID:MYSQL_INSTANCE/DB_NAME?user=USER_NAME"/>
+			<property name="username" value="USER_NAME"/>
+			<property name="password" value="PASSWORD"/>
 	</bean>
+	
+
+	
+	
 	
 	<!-- Entity manage to manage entities created with the data source -->
 	<bean

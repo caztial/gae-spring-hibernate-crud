@@ -36,8 +36,15 @@
 	<definition name="adminAddOrder" extends="adminTemplate">
 		<put-attribute name="body" value="/WEB-INF/jsp/admin/addorder.jsp" />
 	</definition>
-
-
+	<definition name="adminViewOrder" extends="adminTemplate">
+		<put-attribute name="body" value="/WEB-INF/jsp/admin/vieworder.jsp" />
+	</definition>
+	<definition name="adminEditOrder" extends="adminTemplate">
+		<put-attribute name="body" value="/WEB-INF/jsp/admin/editorder.jsp" />
+	</definition>
+	<definition name="adminOrderItems" extends="adminTemplate">
+		<put-attribute name="body" value="/WEB-INF/jsp/admin/orderitems.jsp" />
+	</definition>
 
 
 

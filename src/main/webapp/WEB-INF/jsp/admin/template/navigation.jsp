@@ -28,8 +28,8 @@
 				
 				<li><a href="#"><i class="fa fa-bars fa-fw"></i>Order<span class="fa arrow"></span></a>
 					<ul class="nav nav-second-level">
-						<li><a href="panels-wells.html">View Orders</a></li>
-						<li><a href="buttons.html">Manage Orders</a></li>
+						<li><a href="/admin/vieworders.html">View Orders</a></li>
+						<li><a href="/admin/addorder.html">Add Orders</a></li>
 					</ul> <!-- /.nav-second-level -->
 				</li>
 
