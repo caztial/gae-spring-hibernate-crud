@@ -1,6 +1,8 @@
 package com.japerfect.controllers;
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -53,5 +55,12 @@ public class AdminController {
 		model.addAttribute("newItem", eItem);
 		model.addAttribute("flag",true);
 		return "adminEditItem";
+	}
+	
+	@RequestMapping(value="/admin/viewitems")
+	public String viewItems(Model model){
+		List<Item> items=itemService.getAll();
+		model.addAttribute("items", items);
+		return "adminViewItem";
 	}
 }
